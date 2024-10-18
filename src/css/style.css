@@ -1,0 +1,30 @@
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header img {
+    width: 60%;
+    max-width: 800px;
+}
+
+body {
+    background-image: url("../assets/img/pokemon-field.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    width: 97.5%;
+    max-width: 1872px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
