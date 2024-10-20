@@ -1,15 +1,16 @@
 import { POKE_API } from "../constants/constants.js";
 import { showError } from "../error/error.js";
 
-export async function fetchAllPokemon() {
+export async function fetchPokemonBetween(first, last) {
     try {
-        const data = await fetch(POKE_API);
+        const request = `${POKE_API}?offset=${--first}&limit=${last}`;
+        const data = await fetch(request);
         const response = await data.json();
 
         return response;
     }
     catch(error) {
-        showError("ERRO");
+        showError("Something went wrong with pokeapi. Please try again later.");
         console.error(error.message);
     }
 }
